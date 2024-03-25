@@ -28,13 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.txtRead = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // txtRead
+            // 
+            this.txtRead.Location = new System.Drawing.Point(83, 43);
+            this.txtRead.Name = "txtRead";
+            this.txtRead.Size = new System.Drawing.Size(86, 31);
+            this.txtRead.TabIndex = 0;
+            this.txtRead.Text = "txt读取";
+            this.txtRead.UseVisualStyleBackColor = true;
+            this.txtRead.Click += new System.EventHandler(this.txtRead_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtRead);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -43,6 +55,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button txtRead;
     }
 }
 
