@@ -53,6 +53,9 @@ namespace WindowsFormsDemo1
         //返回0表示失败，非0为成功
         [DllImport("kernel32")]
         private static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
+        [DllImport("kernel32")]
+        private static extern long GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
+
 
         // 读取 INI 文件的方法
         public static string ReadIniData(string section, string key, string noText, string iniFilePath)
