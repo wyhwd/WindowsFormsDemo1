@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.txtRead = new System.Windows.Forms.Button();
+            this.IniRead = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtRead
@@ -41,11 +42,22 @@
             this.txtRead.UseVisualStyleBackColor = true;
             this.txtRead.Click += new System.EventHandler(this.txtRead_Click);
             // 
+            // IniRead
+            // 
+            this.IniRead.Location = new System.Drawing.Point(299, 36);
+            this.IniRead.Name = "IniRead";
+            this.IniRead.Size = new System.Drawing.Size(107, 45);
+            this.IniRead.TabIndex = 1;
+            this.IniRead.Text = "Ini读取";
+            this.IniRead.UseVisualStyleBackColor = true;
+            this.IniRead.Click += new System.EventHandler(this.IniRead_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.IniRead);
             this.Controls.Add(this.txtRead);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -57,6 +69,7 @@
         #endregion
 
         private System.Windows.Forms.Button txtRead;
+        private System.Windows.Forms.Button IniRead;
     }
 }
 
