@@ -25,31 +25,6 @@ namespace WindowsFormsDemo1
         }
         string dir = AppDomain.CurrentDomain.BaseDirectory;
         
-        private void txtRead_Click(object sender, EventArgs e)
-        {
-            string path = string.Format("{0}\\wyh.txt", dir);
-
-            // 写入文件
-
-            // 使用StreamWriter追加文本到文件末尾
-            using (StreamWriter writer = File.AppendText(path))
-            {
-                writer.WriteLine("王跃辉编辑的");
-            }
-
-            
-            TextBox textBox1 = new TextBox();
-            // 读取文件
-            using (StreamReader reader = new StreamReader(path))
-            {
-                // 将StreamReader中的内容读取到一个字符串中
-                string content = reader.ReadToEnd();
-
-                // 使用MessageBox.Show显示字符串内容
-                MessageBox.Show(content);
-
-            }
-        }
         //返回0表示失败，非0为成功
         [DllImport("kernel32")]
         private static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
